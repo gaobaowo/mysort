@@ -10,7 +10,9 @@ class Solution:
         while x>0:
             str_result=str_result+chr(48+x%10)
             x=x//10
-        str_result=str_result[::-1]    
+        str_result=str_result[::-1] 
+        if str_result=="":
+            str_result="0"   
         return str_result
 
     def multiply(self, num1: str, num2: str) -> str:
