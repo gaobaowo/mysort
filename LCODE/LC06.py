@@ -29,20 +29,22 @@ class Solution:
             dat.append(ss)
             dat.append(sss)
 
-        if k >= 0:
+        if k > 0:
             if k>n_row:
                 ss = str[-k:-k+n_row]
                 sss = str[-k+n_row:]
                 rl = len(sss)
-                sss = "\n"+sss+"\n"*(n_row-rl-2)
+                sss = "\n"+sss+"\n"*(n_row-rl-1)
                 sss = sss[::-1]
                 dat.append(ss)
                 dat.append(sss)
             else:
+                # print(f"ss={str[-k:]}{k}")
                 ss=str[-k:]+"\n"*(n_row-k)
+                # print(f"ss={ss}")
                 dat.append(ss)
         result=""
-        print(dat)
+        # print(dat)
         for i in range(n_row):
             for j in range(len(dat)):
                 if dat[j][i]!="\n":
@@ -50,7 +52,7 @@ class Solution:
         return result
 
 a=Solution()
-lstr="abcdssss"
+lstr="abcdefgh"
 print(a.convert(lstr,5))
             
             
