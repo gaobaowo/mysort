@@ -6,5 +6,5 @@ def haoni(n,A,B,C):
         print('Move disk',n,'from',A,'to',C)
         haoni(n-1,B,A,C)
 
-n=5
+n=3
 haoni(n,"A","B","C")
